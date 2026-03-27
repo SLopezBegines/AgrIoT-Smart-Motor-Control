@@ -15,7 +15,7 @@
 ## Overview
 
 A two-node LoRa network enables remote start/stop and real-time telemetry of
-a 50-year-old Barreiros diesel engine from 2+ km away. A custom PCB integrates
+a 50-year-old Diter-Zafra diesel engine from 2+ km away. A custom PCB integrates
 an Arduino Nano, RFM95W LoRa module, 8 relay channels, and four sensor inputs.
 An ESP32 gateway bridges LoRa to WiFi, pushing telemetry to the Blynk cloud.
 
@@ -42,9 +42,9 @@ ESP32 TTGO Gateway (0xFF)
         │ LoRa 868 MHz · 20 dBm · 2.3 km · SF7
         ▼
 Arduino Nano Node (0xBB)
-        │ 12V relay wiring
+        │ 5V relay wiring and 12V relay
         ▼
-1972 Barreiros Diesel Engine
+1972 Diter-Zafra Diesel Engine
 ```
 
 - **Gateway → Node:** Individual JSON commands per Blynk virtual pin (`{"V1":1}`)
