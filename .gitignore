@@ -1,0 +1,70 @@
+# ── Credentials (NEVER commit these) ────────────────────────────
+config.h
+secrets.h
+credentials.h
+*_token.h
+wifi_credentials.h
+
+# ── Arduino IDE ──────────────────────────────────────────────────
+*.hex
+*.eep
+*.elf
+*.map
+*.bin
+
+# ── PlatformIO ───────────────────────────────────────────────────
+.pio/
+.pioenvs/
+.piolibdeps/
+.clang_complete
+.gcc-flags.json
+
+# ── VSCode ───────────────────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+*.code-workspace
+
+# ── Build artifacts ──────────────────────────────────────────────
+build/
+*.o
+*.a
+
+# ── macOS ────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ── Linux ────────────────────────────────────────────────────────
+*~
+.directory
+.Trash-*
+
+# ── Windows ──────────────────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ── Logs & temp ──────────────────────────────────────────────────
+*.log
+debug.txt
+*.tmp
+*.bak
+*.swp
+
+# ── Python ───────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+venv/
+env/
+
+# ── Raw photos (commit JPEGs selectively, not RAW) ───────────────
+photos/**/*.raw
+photos/**/*.CR2
+photos/**/*.NEF
+photos/**/*.psd
+
+# ── Large archives ───────────────────────────────────────────────
+*.zip
+*.tar.gz
+*.rar

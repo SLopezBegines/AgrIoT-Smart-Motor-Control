@@ -1,0 +1,52 @@
+// ============================================================
+// AgrIoT Smart Motor Control — Configuration Template
+// Copy to firmware/gateway/Diesel_Motor_Lora_Gateway_NoOLED/config.h
+// and fill in your credentials. Never commit config.h to git.
+// ============================================================
+
+// ── Blynk Cloud ──────────────────────────────────────────────
+#define BLYNK_TEMPLATE_ID   "YOUR_TEMPLATE_ID"
+#define BLYNK_DEVICE_NAME   "MotorLoraGateway"
+#define BLYNK_AUTH_TOKEN    "YOUR_32_CHAR_AUTH_TOKEN_HERE"
+
+// ── WiFi (leave blank to use WiFiManager portal on first boot) ─
+#define WIFI_SSID     ""
+#define WIFI_PASSWORD ""
+
+// ── OTA update credentials ───────────────────────────────────
+#define OTA_USERNAME  "admin"
+#define OTA_PASSWORD  "change_me"
+
+// ── LoRa RF settings ─────────────────────────────────────────
+// Must match between gateway and node
+#define LORA_FREQUENCY        868E6   // 868 MHz (EU). Use 915E6 for US.
+#define LORA_TX_POWER         20      // dBm — 2 to 20 (PA_BOOST pin)
+#define LORA_SPREADING_FACTOR 7       // SF7–SF12. Higher = longer range, lower data rate.
+#define LORA_SYNC_WORD        0xF3    // Private network sync word
+
+// ── Node addresses ───────────────────────────────────────────
+#define GATEWAY_ADDRESS  0xFF   // Broadcast / gateway address
+#define NODE_ADDRESS_1   0xBB   // Primary irrigation engine node
+#define NODE_ADDRESS_2   0xBC   // Secondary node (future expansion)
+
+// ── Sensor calibration ───────────────────────────────────────
+// Voltage divider: R1 = 22 kΩ, R2 = 4.7 kΩ
+// Vin = raw * 5.0 * (R1 + R2) / (R2 * 1023)
+#define VOLTAGE_R1  22000.0   // Ohms
+#define VOLTAGE_R2   4700.0   // Ohms
+
+// Pressure transducer: linear 0–5 V output
+// Presion (bar) = raw * 5000 mV * 0.0028 / 1023
+#define PRESSURE_CAL_FACTOR  0.0028
+
+// RPM sensor: Hall effect on alternator fan (1 pulse per rotation)
+#define RPM_MIN   1000    // Minimum expected engine RPM (idle)
+#define RPM_MAX  75000    // Maximum (raw Hz * 60 at max governed speed)
+
+// ── Timing ───────────────────────────────────────────────────
+#define TELEMETRY_INTERVAL_MS  60000   // Node → Gateway telemetry period (ms)
+#define SENSOR_SAMPLES         100     // ADC samples per reading (averaging)
+#define START_PULSE_MS         500     // Starter relay pulse duration (ms)
+#define STOP_PULSE_MS          550     // Stop relay pulse duration (ms)
+#define COOLDOWN_DELAY_MS     5000     // Delay before cooldown relay (ms)
+#define COOLDOWN_DURATION_MS  3000     // Cooldown relay active duration (ms)
