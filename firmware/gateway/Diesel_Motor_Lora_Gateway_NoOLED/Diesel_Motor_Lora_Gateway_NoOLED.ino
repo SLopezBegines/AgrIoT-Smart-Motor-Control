@@ -1,8 +1,8 @@
 // Template ID, Device Name and Auth Token are provided by the Blynk.Cloud
 // See the Device Info tab, or Template settings
-#define BLYNK_TEMPLATE_ID "TMPLfqlfDody"
+#define BLYNK_TEMPLATE_ID "YOUR_TEMPLATE_ID"
 #define BLYNK_DEVICE_NAME "MotorLoraGateway"
-#define BLYNK_AUTH_TOKEN "YE3JSMYSyZiVRS_iVfMLEqJzJWK1pnom"
+#define BLYNK_AUTH_TOKEN "YOUR_AUTH_TOKEN"
 //#define BLYNK_AUTH_TOKEN "tEoqBekxOVQrfscHwa7MmkOC86-A5OKC"
 // Comment this out to disable prints and save space
 #define BLYNK_PRINT Serial
